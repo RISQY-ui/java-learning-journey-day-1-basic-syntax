@@ -1,134 +1,130 @@
-# java-learning-journey-day-1-basic-syntax
-Learning Java basics step by step using Termux. Starting from print output and loop fundamentals.
+# Complete Java Guide on Termux
 
-# Panduan Lengkap Java di Termux
-
-**Dokumentasi Teknis** | **Platform: Android (Termux)** | **Tanggal: 19 Juni 2026**
+Technical Documentation | Platform: Android (Termux) | Date: June 19, 2026
 
 ---
 
-## 📋 Daftar Isi
+📋 Table of Contents
 
-- [1. Pendahuluan](#1-pendahuluan)
-- [2. Instalasi Java di Termux](#2-instalasi-java-di-termux)
-- [3. Membuat File Java Pertama](#3-membuat-file-java-pertama)
-- [4. Struktur Dasar Java](#4-struktur-dasar-java)
-- [5. Compile & Jalankan Program](#5-compile--jalankan-program)
-- [6. Contoh Program (Perulangan)](#6-contoh-program-perulangan)
-- [7. Error Paling Sering Terjadi](#7-error-paling-sering-terjadi)
-- [8. Pola Dasar Java yang Harus Diingat](#8-pola-dasar-java-yang-harus-diingat)
-- [9. Alur Cepat di Termux](#9-alur-cepat-di-termux)
-- [10. Level Berikutnya](#10-level-berikutnya)
-
----
-
-## 1. Pendahuluan
-
-### Apa itu Java?
-
-Java adalah bahasa pemrograman yang **populer**, **stabil**, dan **banyak digunakan** di dunia enterprise, aplikasi Android, hingga backend development.
-
-### Mengapa Belajar Java di Termux?
-
-| Keuntungan | Keterangan |
-|------------|-------------|
-| **Tanpa Laptop** | Bisa belajar Java langsung dari HP |
-| **Portabel** | Bawa kemanapun, praktik kapanpun |
-| **Ringan** | Termux + OpenJDK 21 tidak memberatkan HP |
-| **Lengkap** | Bisa compile, run, bahkan bikin project kecil |
+· 1. Introduction
+· 2. Installing Java on Termux
+· 3. Creating Your First Java File
+· 4. Java Basic Structure
+· 5. Compile & Run Program
+· 6. Example Program (Loops)
+· 7. Most Common Errors
+· 8. Java Basic Pattern to Remember
+· 9. Quick Workflow on Termux
+· 10. Next Level
 
 ---
 
-## 2. Instalasi Java di Termux
+1. Introduction
 
-### Langkah 1: Update & Upgrade
+What is Java?
+
+Java is a popular, stable, and widely used programming language in enterprise applications, Android development, and backend systems.
+
+Why Learn Java on Termux?
+
+Advantage Description
+No Laptop Needed Learn Java directly from your phone
+Portable Carry it anywhere, practice anytime
+Lightweight Termux + OpenJDK 21 doesn't burden your phone
+Complete Can compile, run, and even build small projects
+
+---
+
+2. Installing Java on Termux
+
+Step 1: Update & Upgrade
 
 ```bash
 pkg update && pkg upgrade
 ```
 
-Langkah 2: Install OpenJDK 21
+Step 2: Install OpenJDK 21
 
 ```bash
 pkg install openjdk-21
 ```
 
-Langkah 3: Verifikasi Instalasi
+Step 3: Verify Installation
 
-Cek apakah Java sudah terinstall dengan benar:
+Check if Java is installed correctly:
 
 ```bash
 java --version
 javac --version
 ```
 
-Hasil yang Diharapkan:
+Expected Output:
 
-Perintah Output Contoh
+Command Example Output
 java --version openjdk version "21.0.x"
 javac --version javac 21.0.x
 
-✅ Jika kedua perintah di atas menampilkan versi, maka Java sudah siap digunakan.
+✅ If both commands display version numbers, Java is ready to use.
 
 ---
 
-3. Membuat File Java Pertama
+3. Creating Your First Java File
 
-Langkah 1: Buka Editor di Termux
+Step 1: Open Editor on Termux
 
 ```bash
 nano Main.java
 ```
 
-Langkah 2: Ketik Kode Java
+Step 2: Type Java Code
 
-Ketik kode berikut (penjelasan ada di bagian selanjutnya).
+Type the code below (explanation provided in the next section).
 
-Langkah 3: Simpan File
+Step 3: Save File
 
-Tombol Fungsi
-CTRL + O Menyimpan file
-Enter Konfirmasi nama file
-CTRL + X Keluar dari editor nano
+Key Function
+CTRL + O Save file
+Enter Confirm file name
+CTRL + X Exit nano editor
 
 ---
 
-4. Struktur Dasar Java (WAJIB)
+4. Java Basic Structure (MANDATORY)
 
-Kode Dasar
+Basic Code
 
 ```java
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Halo Faris");
+        System.out.println("Hello Faris");
     }
 }
 ```
 
-Penjelasan Setiap Bagian
+Explanation of Each Part
 
-Bagian Kode Fungsi
-public class Main Membuat class bernama Main — nama file harus sama dengan nama class!
-public static void main(String[] args) Method utama — titik awal semua program Java. Wajib ada!
-System.out.println("..."); Perintah mencetak teks ke layar
-{ } Menandai blok kode (awal & akhir)
-; Mengakhiri setiap perintah
+Code Part Function
+public class Main Creates a class named Main — file name must match class name!
+public static void main(String[] args) Main method — entry point of all Java programs. Mandatory!
+System.out.println("..."); Command to print text to the screen
+{ } Marks a code block (start & end)
+; Ends each statement
 
-⚠️ Aturan Penting: Nama file .java HARUS SAMA dengan nama class di dalamnya. Contoh: file Main.java → class Main
+⚠️ Important Rule: The .java file name MUST match the class name inside it. Example: Main.java → class Main
 
 ---
 
-5. Compile & Jalankan Program
+5. Compile & Run Program
 
-Compile (Ubah Kode Menjadi Program)
+Compile (Convert Code to Program)
 
 ```bash
 javac Main.java
 ```
 
-Hasil: Jika sukses, akan muncul file baru bernama Main.class (file bytecode Java).
+Result: If successful, a new file named Main.class will appear (Java bytecode file).
 
-Jalankan Program
+Run Program
 
 ```bash
 java Main
@@ -137,16 +133,16 @@ java Main
 Output:
 
 ```
-Halo Faris
+Hello Faris
 ```
 
-💡 Tips: Jalankan java tanpa .class atau .java — cukup nama class-nya saja.
+💡 Tip: Run with java without .class or .java — just the class name.
 
 ---
 
-6. Contoh Program (Perulangan)
+6. Example Program (Loops)
 
-Kode
+Code
 
 ```java
 public class Main {
@@ -169,101 +165,96 @@ Output
 5
 ```
 
-Penjelasan
+Explanation
 
-Bagian Kode Fungsi
-for (int i = 0; i <= 5; i++) Perulangan dari 0 sampai 5
-System.out.println(i); Cetak nilai i setiap iterasi
+Code Part Function
+for (int i = 0; i <= 5; i++) Loop from 0 to 5
+System.out.println(i); Print value of i each iteration
 
 ---
 
-7. Error Paling Sering Terjadi
+7. Most Common Errors
 
-❌ Salah: Huruf kecil
+❌ Wrong: Lowercase
 
 ```java
-system.out.println("Halo");
+system.out.println("Hello");
 ```
 
-✅ Benar: Huruf besar
+✅ Correct: Uppercase
 
 ```java
-System.out.println("Halo");
+System.out.println("Hello");
 ```
 
-📌 Pelajaran: Java adalah case-sensitive — huruf besar dan kecil dibedakan!
+📌 Lesson: Java is case-sensitive — uppercase and lowercase are distinguished!
 
-Kesalahan Lain yang Sering Muncul
+Other Common Errors
 
-Error Penyebab Solusi
-class Main is public, should be declared in a file named Main.java Nama file tidak sama dengan nama class Ganti nama file atau class agar sama
-cannot find symbol Ada typo di nama method/variabel Cek kembali penulisan kode
-';' expected Lupa tanda titik koma (;) di akhir perintah Tambahkan ;
-
----
-
-8. Pola Dasar Java yang Harus Diingat
-
-Elemen Contoh Fungsi
-class class Main Membungkus semua kode
-main method public static void main Titik masuk program
-print System.out.println Mencetak ke layar
-curly braces { } Membuka & menutup blok kode
-semicolon ; Mengakhiri perintah
-parentheses ( ) Mengelompokkan parameter
+Error Cause Solution
+class Main is public, should be declared in a file named Main.java File name doesn't match class name Rename file or class to match
+cannot find symbol Typo in method/variable name Double-check code spelling
+';' expected Missing semicolon ; at end of statement Add ;
 
 ---
 
-9. Alur Cepat di Termux
+8. Java Basic Pattern to Remember
+
+Element Example Function
+class class Main Wraps all code
+main method public static void main Program entry point
+print System.out.println Print to screen
+curly braces { } Open & close code block
+semicolon ; End statement
+parentheses ( ) Group parameters
+
+---
+
+9. Quick Workflow on Termux
 
 ```bash
-# 1. Buat file
+# 1. Create file
 nano Main.java
 
-# 2. Compile (ubah jadi program)
+# 2. Compile (convert to program)
 javac Main.java
 
-# 3. Jalankan
+# 3. Run
 java Main
 ```
 
 ---
 
-10. Level Berikutnya
+10. Next Level
 
-Setelah menguasai dasar, Faris akan belajar:
+After mastering the basics, Faris will learn:
 
-Topik Fungsi
-Scanner Menerima input dari keyboard
-if-else Percabangan (keputusan)
-while loop Perulangan dengan kondisi
-array Menyimpan banyak data
-method Membuat fungsi sendiri
+Topic Function
+Scanner Receive keyboard input
+if-else Branching (decisions)
+while loop Loops with conditions
+Array Store multiple data
+Method Create your own functions
 OOP Object-Oriented Programming (class & object)
 
 ---
 
-📊 Ringkasan Perintah
+📊 Command Summary
 
-Perintah Fungsi
+Command Function
 pkg install openjdk-21 Install Java
-java --version Cek versi Java
-javac Main.java Compile file Java
-java Main Jalankan program
-nano Main.java Buat/edit file Java
+java --version Check Java version
+javac Main.java Compile Java file
+java Main Run program
+nano Main.java Create/edit Java file
 
 ---
 
-✅ Status Akhir
+✅ Final Status
 
-Komponen Status
-Java di Termux ✅ Terinstall (openjdk-21)
-File Main.java ✅ Bisa dibuat
-Compile javac ✅ Berjalan normal
-Run java ✅ Berjalan normal
-Program Halo ✅ Output sesuai
-
----
-
-Panduan Lengkap Java di Termux. Disusun untuk keperluan belajar dan arsip pribadi.
-Cocok untuk pemula yang ingin belajar Java langsung dari HP.
+Component Status
+Java on Termux ✅ Installed (openjdk-21)
+Main.java File ✅ Can be created
+Compile javac ✅ Runs normally
+Run java ✅ Runs normally
+Hello Program ✅ Output matches
